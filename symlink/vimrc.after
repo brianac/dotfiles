@@ -1,0 +1,26 @@
+" Interface
+"set guifont=Sauce\ Code\ Powerline:h15
+set guifont=Droid\ Sans\ Mono\ for\ Powerline:h15
+set background=dark
+"let base16colorspace=256
+colorscheme Tomorrow-Night-Eighties
+
+" Use the mouse
+"set mouse=a
+
+" Prevent 'Ex mode'
+:nnoremap Q <Nop>
+
+" Better Ack
+nmap <leader>f :Ack! 
+
+" Folding
+set foldcolumn=2
+set foldlevelstart=20
+set foldmethod=indent
+
+" treat folds as text-objects
+vnoremap af :<C-U>silent! normal! [zV]z<CR>
+omap af :normal Vaf<CR>
+
+autocmd FileType ruby set foldmethod=syntax

@@ -1,0 +1,52 @@
+[user]
+	name = Travers McInerney
+	email = travers@mcinerney.me
+
+[alias]
+  a       = add -p
+  co      = checkout
+  ci      = commit -v
+  cim     = commit -m
+  st      = status -sb
+  br      = branch
+  hist    = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  lg      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  standup = log --since=yesterday --author='Travers McInerney'
+  pr      = pull-request | pbcopy
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+
+[color "status"]
+  changed = yellow
+  added = green
+  untracked = red
+
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+
+[push]
+	default = upstream
+
+[branch]
+  autosetuprebase = always
+
+[credential]
+  helper = /opt/boxen/bin/boxen-git-credential
+
+
+[hub]
+protocol = https
