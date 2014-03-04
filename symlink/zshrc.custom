@@ -10,9 +10,15 @@ alias update='git stash && git pull && bundle install && git stash pop && restar
 alias vim='mvim -v'
 alias watch='tail -f log/development.log'
 
-export EDITOR='mvim -f'
+# Set vim as the editor of choice
+export GIT_EDITOR="vim"
+export EDITOR="vim"
+export VISUAL="vim"
+
+# Add local binaries to the path
 export PATH="~/bin:$PATH"
 
+# Enable vim mode in the shell
 set -o vi
 
 # Disable auto correct
