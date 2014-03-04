@@ -16,7 +16,6 @@
 
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
 
 [color]
   diff = auto
@@ -32,7 +31,7 @@
 
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
@@ -43,10 +42,3 @@
 
 [branch]
   autosetuprebase = always
-
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
-
-
-[hub]
-protocol = https
