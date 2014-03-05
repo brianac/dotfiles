@@ -23,7 +23,7 @@
   untracked = red
 
 [push]
-	default = simple
+  default = simple
 
 [pull]
   default = simple
