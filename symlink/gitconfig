@@ -23,7 +23,10 @@
   untracked = red
 
 [push]
-	default = upstream
+	default = simple
+
+[pull]
+  default = simple
 
 [branch]
   autosetuprebase = always
