@@ -1,0 +1,29 @@
+'exception-reporting':
+  'userId': '81879ccd-7dbb-9672-8fd1-efca3df7e53a'
+'release-notes':
+  'viewedVersion': '0.81.0'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '67049412f8d15147aa63d8c621048425d321a8ca'
+'editor':
+  'fontFamily': 'Courier New'
+  'fontSize': 15
+  'showInvisibles': true
+  'showIndentGuide': true
+'core':
+  'themes': [
+    'atom-dark-flat-ui'
+    'atom-dark-syntax'
+  ]
+  'ignoredNames': [
+    '.git'
+    '.svn'
+    '.DS_Store'
+    'node_modules'
+  ]
+  'disabledPackages': [
+    'travis-ci-status'
+    'vim-mode'
+    'Zen'
+  ]
