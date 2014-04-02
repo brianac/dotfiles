@@ -7,14 +7,14 @@
 'metrics':
   'userId': '67049412f8d15147aa63d8c621048425d321a8ca'
 'editor':
-  'fontFamily': 'Courier New'
   'fontSize': 15
   'showInvisibles': true
   'showIndentGuide': true
+  'fontFamily': 'Courier New'
 'core':
   'themes': [
     'atom-dark-flat-ui'
-    'atom-dark-syntax'
+    'monokai'
   ]
   'ignoredNames': [
     '.git'
