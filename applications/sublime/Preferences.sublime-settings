@@ -2,23 +2,24 @@
 	"bold_folder_labels": false,
 	"caret_style": "block",
 	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
-	"ensure_newline_at_eof_on_save": false,
+	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
 		".git"
 	],
-	"font_face": "Source Code Pro",
+	"font_face": "Droid Sans Mono for Powerline",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 15,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Vintageous"
 	],
 	"indent_to_bracket": true,
 	"remember_open_files": false,

@@ -21,7 +21,7 @@ set listchars=tab:▸\ ,eol:¬
 au BufRead,BufNewFile *.hdbs set filetype=handlebars
 
 " Ignore some directories
-set wildignore+=*/.git/*,*/node_modules/*,*/vendor/bundle/*,*/vendor/cache/*
+set wildignore+=*/.git/*,*/node_modules/*,*/vendor/bundle/*,*/vendor/cache/*,*/amps-standalone/*
 
 "" MAPPINGS
 let mapleader = ","

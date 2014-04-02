@@ -1,6 +1,6 @@
 " Interface
 "set guifont=Sauce\ Code\ Powerline:h15
-set guifont=Droid\ Sans\ Mono\ for\ Powerline:h15
+set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
 set background=dark
 "let base16colorspace=256
 colorscheme Tomorrow-Night-Eighties
