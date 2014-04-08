@@ -2,17 +2,31 @@
 	"bold_folder_labels": false,
 	"caret_style": "block",
 	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
-	"ensure_newline_at_eof_on_save": false,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.map",
+		"*.min.js",
+		".tags",
+		"tags"
+	],
 	"folder_exclude_patterns":
 	[
-		".git"
+		".bundle",
+		".cache",
+		".git",
+		".grunt",
+		"node_modules",
+		"tmp",
+		"vendor"
 	],
-	"font_face": "Source Code Pro",
+	"font_face": "Fantasque Sans Mono",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 15,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,

@@ -1,0 +1,11 @@
+{
+  "name": "base16-ocean-dark",
+  "theme": "syntax",
+  "version": "0.3.0",
+  "description": "Base16 Ocean Dark Color Syntax",
+  "repository": "https://github.com/robbschiller/base16-ocean-dark",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

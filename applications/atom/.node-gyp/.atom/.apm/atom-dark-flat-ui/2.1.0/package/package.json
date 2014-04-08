@@ -1,0 +1,11 @@
+{
+  "name": "atom-dark-flat-ui",
+  "theme": "ui",
+  "version": "2.1.0",
+  "description": "Fork of the default Dark theme (but with flat tabs) for interface components",
+  "license": "MIT",
+  "repository": "https://github.com/sdegutis/atom-dark-flat-ui",
+  "engines": {
+    "atom": ">0.40.0"
+  }
+}

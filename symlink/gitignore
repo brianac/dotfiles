@@ -4,8 +4,10 @@
 *.swp
 *.rbc
 .floo*
+.idea
 .ruby-version
 .sublime-project
-.idea
+.tags
 tags
+tags_sorted_by_file
 vendor/bundle

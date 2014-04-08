@@ -11499,7 +11499,7 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HighlightTabLabels</key>
 	<true/>
 	<key>HotKeyBookmark</key>
@@ -11528,10 +11528,12 @@
 	<false/>
 	<key>NSColorPanelMode</key>
 	<string>5</string>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~/Code/personal/dotfiles/applications/iterm</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -11558,13 +11560,17 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>0 569 214 309 0 0 1440 878 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>937 508 503 236 0 0 1440 878 </string>
+	<string>-540 583 503 236 -1440 540 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1766 527 924 485 1440 -280 2560 1440 </string>
+	<string>-1169 762 924 485 -1440 540 1440 900 </string>
+	<key>NSWindow Frame SUUpdateAlertFrame</key>
+	<string>992 770 575 392 0 0 2560 1418 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>230 834 592 584 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2512 1378 0 0 1440 878 </string>
+	<string>398 167 598 399 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1882 -246 730 548 1440 -280 2560 1418 </string>
+	<string>1882 -470 650 498 1440 -540 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_77D04425-D026-4403-950D-246B43681454</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -11579,11 +11585,11 @@
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.0</real>
 				<key>Green Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.17647059261798859</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -11642,11 +11648,11 @@
 			<key>Ansi 15 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.92549020051956177</real>
+				<real>0.99999129772186279</real>
 				<key>Green Component</key>
-				<real>0.94117647409439087</real>
+				<real>0.99997437000274658</real>
 				<key>Red Component</key>
-				<real>0.94901961088180542</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -11696,20 +11702,20 @@
 			<key>Ansi 7 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.99999129772186279</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.99997437000274658</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.4117647111415863</real>
+				<real>0.0</real>
 				<key>Green Component</key>
-				<real>0.45098039507865906</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.45490196347236633</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -11750,11 +11756,11 @@
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.80000001192092896</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.80000001192092896</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.80000001192092896</real>
 			</dict>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -11767,11 +11773,11 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.80000001192092896</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.80000001192092896</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.80000001192092896</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -11801,11 +11807,11 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.80000001192092896</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.80000001192092896</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.80000001192092896</real>
 			</dict>
 			<key>Guid</key>
 			<string>77D04425-D026-4403-950D-246B43681454</string>
@@ -12123,11 +12129,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>DroidSansMonoForPowerline 15</string>
+			<string>FantasqueSansMono-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>DroidSansMonoForPowerline 15</string>
+			<string>FantasqueSansMono-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -12147,11 +12153,11 @@
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.78431373834609985</real>
+				<real>0.80000001192092896</real>
 				<key>Green Component</key>
-				<real>0.81568628549575806</real>
+				<real>0.80000001192092896</real>
 				<key>Red Component</key>
-				<real>0.82745099067687988</real>
+				<real>0.80000001192092896</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
@@ -13084,7 +13090,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/tmcinerney/Code/personal/dotfiles/iterm</string>
+	<string>/Users/tmcinerney/Code/personal/dotfiles/applications/iterm</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -13102,7 +13108,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-02-20T04:04:55Z</date>
+	<date>2014-04-03T04:26:14Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -13131,6 +13137,8 @@
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1395618432</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -13154,6 +13162,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20140112</string>
+	<string>1.0.0.20130622</string>
 </dict>
 </plist>
