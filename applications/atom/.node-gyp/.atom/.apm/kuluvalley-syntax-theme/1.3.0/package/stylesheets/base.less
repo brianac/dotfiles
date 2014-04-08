@@ -1,0 +1,132 @@
+@import "syntax-variables";
+
+.editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor .gutter {
+  background-color: @syntax-gutter-background-color;
+  color: @syntax-gutter-text-color;
+}
+
+.editor .gutter .line-number.cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+  color: @syntax-gutter-text-color-selected;
+}
+
+.editor .gutter .line-number.cursor-line-no-selection {
+  color: @syntax-gutter-text-color-selected;
+}
+
+.editor .wrap-guide {
+  color: @syntax-wrap-guide-color;
+}
+
+.editor .indent-guide {
+  color: @syntax-indent-guide-color;
+}
+
+.editor .invisible-character {
+  color: @syntax-invisible-character-color;
+}
+
+.editor .search-results .marker .region {
+  background-color: transparent;
+  border: @syntax-result-marker-color;
+}
+
+.editor .search-results .marker.current-result .region {
+  border: @syntax-result-marker-color-selected;
+}
+
+.editor.is-focused .cursor {
+  border-color: @syntax-cursor-color;
+}
+
+.editor.is-focused .selection .region {
+  background-color: @syntax-selection-color;
+}
+
+.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
+  background-color: #474f51;
+}
+
+.comment {
+  font-style: italic;
+  color: #888A85;
+}
+
+.string {
+  color: #EDD400;
+}
+
+.constant.numeric {
+  color: #CE5C00;
+}
+
+.constant.language {
+  font-weight: bold;
+  color: #ED9038;
+}
+
+.constant.character, .constant.other {
+  color: #F57900;
+}
+
+.variable.language, .variable.other {
+  color: #729FCF;
+}
+
+.keyword {
+  font-weight: bold;
+  color: #B3C0CD;
+}
+
+.storage {
+  font-weight: bold;
+  color: #FFF4BA;
+}
+
+.entity.name {
+  font-weight: bold;
+  color: #8AE234;
+}
+
+.entity.other.inherited-class {
+  font-weight: bold;
+  color: #73D216;
+}
+
+.entity.name.function {
+  color: #729FCF;
+}
+
+.variable.language {
+}
+
+.entity.name.tag {
+}
+
+.entity.other.attribute-name {
+}
+
+.support.function {
+}
+
+.support.constant {
+}
+
+.support.type, .support.class {
+}
+
+.support.other.variable {
+}
+
+.invalid {
+}
+
+.support.class {
+  font-weight: bold;
+  color: #AD7FA8;
+}

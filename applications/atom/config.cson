@@ -7,14 +7,14 @@
 'metrics':
   'userId': '67049412f8d15147aa63d8c621048425d321a8ca'
 'editor':
-  'fontSize': 15
+  'fontSize': 14
   'showInvisibles': true
   'showIndentGuide': true
   'fontFamily': 'Courier New'
 'core':
   'themes': [
     'atom-dark-flat-ui'
-    'monokai'
+    'base16-tomorrow-dark-theme'
   ]
   'ignoredNames': [
     '.git'
@@ -24,6 +24,5 @@
   ]
   'disabledPackages': [
     'travis-ci-status'
-    'vim-mode'
     'Zen'
   ]
