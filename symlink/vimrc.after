@@ -1,7 +1,7 @@
 " Interface
 set guifont=Fantasque\ Sans\ Mono:h14
 set background=dark
-colorscheme Tomorrow-Night-Eighties
+colorscheme jellybeans
 
 " Use the mouse
 "set mouse=a

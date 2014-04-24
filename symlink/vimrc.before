@@ -30,9 +30,12 @@ inoremap jjw <esc> :w!<cr>
 nmap <leader>w :w!<cr>
 
 "" PLUGINS
-" Airline
-let g:airline#extensions#tabline#enabled=1
-let g:airline_powerline_fonts=1
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
 
 " Syntastic
 let g:syntastic_enable_signs=1
@@ -43,8 +46,3 @@ let g:syntastic_auto_loc_list=2
 let g:tagbar_width     = 45
 let g:tagbar_ctags_bin = "/opt/boxen/homebrew/bin/ctags"
 
-" Powerline
-"let g:Powerline_theme="skwp"
-"let g:Powerline_colorscheme="Tomorrow-Night"
-"let g:Powerline_symbols="fancy"
-"set rtp+=/Users/tmcinerney/Code/other/powerline/powerline/bindings/vim
