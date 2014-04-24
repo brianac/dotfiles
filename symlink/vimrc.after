@@ -10,7 +10,7 @@ colorscheme jellybeans
 :nnoremap Q <Nop>
 
 " Better Ack
-nmap <leader>f :Ack!
+nmap <leader>f :Ack! 
 
 " Folding
 set foldcolumn=2

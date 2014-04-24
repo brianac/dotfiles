@@ -25,9 +25,8 @@ set wildignore+=*/.git/*,*/node_modules/*,*/vendor/bundle/*,*/vendor/cache/*,*/a
 
 "" MAPPINGS
 let mapleader = ","
-inoremap jj <esc>
-inoremap jjw <esc> :w!<cr>
-nmap <leader>w :w!<cr>
+inoremap jj <esc> :w!<cr>
+map <leader>w :w!<cr>
 
 "" PLUGINS
 " Lightline
@@ -46,3 +45,5 @@ let g:syntastic_auto_loc_list=2
 let g:tagbar_width     = 45
 let g:tagbar_ctags_bin = "/opt/boxen/homebrew/bin/ctags"
 
+" Tmuxline
+let g:tmuxline_theme  = "lightline"
