@@ -40,7 +40,6 @@
 	"indent_to_bracket": true,
 	"ignored_packages":
 	[
-		"Vintageous",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,

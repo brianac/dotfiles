@@ -1,5 +1,5 @@
 " Interface
-set guifont=Fantasque\ Sans\ Mono:h14
+set guifont=Source\ Code\ Pro:h14
 set background=dark
 colorscheme jellybeans
 
@@ -10,7 +10,7 @@ colorscheme jellybeans
 :nnoremap Q <Nop>
 
 " Better Ack
-nmap <leader>f :Ack! 
+nmap <leader>f :Ack!
 
 " Folding
 set foldcolumn=2
