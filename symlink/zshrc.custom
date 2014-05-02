@@ -2,6 +2,7 @@
 # ********************************************************
 
 alias bower='noglob bower'
+alias less='less -XF'
 alias mysql="mysql -uroot"
 alias reload!="source ~/.zshrc"
 alias restart!="touch ./tmp/restart.txt"
