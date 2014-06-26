@@ -3,6 +3,7 @@
 *~
 *.swp
 *.rbc
+.env.example
 .floo*
 .idea
 .ruby-version

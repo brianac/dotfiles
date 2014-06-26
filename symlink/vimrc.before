@@ -18,7 +18,7 @@ set visualbell            " Don't beep
 set listchars=tab:▸\ ,eol:¬
 
 " Syntax highlighting
-au BufRead,BufNewFile *.hdbs set filetype=handlebars
+au BufRead,BufNewFile *.hdbs,*.rhdbs set filetype=handlebars
 
 " Ignore some directories
 set wildignore+=*/.git/*,*/node_modules/*,*/vendor/bundle/*,*/vendor/cache/*,*/amps-standalone/*

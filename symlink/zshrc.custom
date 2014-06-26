@@ -22,7 +22,7 @@ export VISUAL="vim"
 export TERM="xterm-256color"
 
 # Add local binaries to the path
-export PATH="~/bin:$PATH"
+export PATH="/users/tmcinerney/bin:$PATH"
 
 # Enable vim mode in the shell
 set -o vi
@@ -35,11 +35,9 @@ unsetopt correct
 # ********************************************************
 
 alias be='bundle exec'
-alias bi='bundle install'
+alias bi='bundle install --path vendor/bundle'
 alias sb='script/bootstrap'
 alias sc='script/console'
-alias sg='script/generate'
-alias sd='script/destroy'
 alias migrate='rake db:migrate db:test:clone'
 
 

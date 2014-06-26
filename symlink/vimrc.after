@@ -1,7 +1,7 @@
 " Interface
 set guifont=Source\ Code\ Pro:h14
 set background=dark
-colorscheme jellybeans
+colorscheme base16-tomorrow
 
 " Use the mouse
 "set mouse=a
@@ -11,6 +11,9 @@ colorscheme jellybeans
 
 " Better Ack
 nmap <leader>f :Ack!
+
+" Clear search highlighting
+nnoremap <leader><space> :noh<cr>
 
 " Folding
 set foldcolumn=2
