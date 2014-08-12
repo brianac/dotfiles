@@ -1,5 +1,23 @@
 # GENERAL
 # ********************************************************
+#
+
+# ALIASES
+alias classic='cd ~/code/zendesk/zendesk'
+alias lotus='cd ~/code/zendesk/zendesk_console'
+alias carson='cd ~/code/zendesk/zendesk_carson'
+alias zam='cd ~/code/zendesk/zendesk_app_market'
+alias zaf='cd ~/code/zendesk/zendesk_app_framework'
+alias provisioning='cd ~/code/zendesk/zendesk_provisioning'
+alias apps='cd ~/code/zendesk/apps'
+alias monitor='cd ~/code/zendesk/zendesk_monitor'
+alias sf='cd ~/code/zendesk/snowflake'
+alias zef='cd ~/code/zendesk/engagement_framework'
+alias zendesk='cd ~/code/zendesk'
+
+setopt completealiases
+
+export PATH=/Users/brianacoppard/bin:$PATH
 
 alias bower='noglob bower'
 alias less='less -XF'
@@ -12,23 +30,6 @@ alias tidy_git="git branch --merged | grep -v master | xargs git branch -d"
 alias update='git stash && git pull && bundle install && git stash pop && restart!'
 alias vim='mvim -v'
 alias watch='tail -f log/development.log'
-
-# Set vim as the editor of choice
-export GIT_EDITOR="vim"
-export EDITOR="vim"
-export VISUAL="vim"
-
-# Force 256 colors
-export TERM="xterm-256color"
-
-# Add local binaries to the path
-export PATH="/users/tmcinerney/bin:$PATH"
-
-# Enable vim mode in the shell
-set -o vi
-
-# Disable auto correct
-unsetopt correct
 
 
 # RUBY
@@ -57,6 +58,19 @@ export ZENDESK_PROVISIONING_PATH=~/Code/zendesk/zendesk_provisioning
 export ZENDESK_HOST=zendesk.dev
 #export ZENDESK_PORT=80
 
+# Set vim as the editor of choice
+export GIT_EDITOR="vim"
+export EDITOR="vim"
+export VISUAL="vim"
+
+# Force 256 colors
+export TERM="xterm-256color"
+
+# Enable vim mode in the shell
+set -o vi
+
+# Disable auto correct
+unsetopt correct
 
 # INITIALIZATION
 # ********************************************************
@@ -93,3 +107,38 @@ fi
 
 # RBENV
 eval "$(rbenv init -)"
+
+
+setopt HIST_IGNORE_DUPS
+setopt no_beep
+setopt auto_cd
+setopt auto_name_dirs
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+
+
+# prompt setup
+zstyle :compinstall filename '/Users/brianacoppard/.zshrc'
+
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+setopt prompt_subst
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' stagedstr 'M' 
+zstyle ':vcs_info:*' unstagedstr 'M' 
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+zstyle ':vcs_info:*' formats \
+  '%F{2}%b %F{2}%c%F{5}%u%f'
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+zstyle ':vcs_info:*' enable git 
++vi-git-untracked() {
+  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+    git status --porcelain | grep '??' &> /dev/null ; then
+    hook_com[unstaged]+='%F{1}??%f'
+  fi  
+}
+
