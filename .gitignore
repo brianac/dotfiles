@@ -1,2 +1,15 @@
-pelletier/market_search/
-applications/atom/storage/
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+Icon?
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*.orig
+*~
+\#*\#
+tags
+tmp/
