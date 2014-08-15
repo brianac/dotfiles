@@ -3,6 +3,7 @@ set hidden                " Allow buffer switching without having to save
 set history=1000          " Remember more commands and search history
 set noerrorbells          " Don't beep
 set shiftwidth=2          " An autoindent (with <<) is two spaces
+vnoremap <C-k> :m 'iftwidth=2          " An autoindent (with <<) is two spaces
 
 " Hide the launch screen
 set shortmess+=I
@@ -14,19 +15,19 @@ set ttimeoutlen=50        " Quicker timeout for leaving insert mode
 set undolevels=1000       " More undos
 set visualbell            " Don't beep
 
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-
-" Syntax highlighting
-au BufRead,BufNewFile *.hdbs,*.rhdbs set filetype=handlebars
-
-" Ignore some directories
-set wildignore+=*/.git/*,*/node_modules/*,*/vendor/bundle/*,*/vendor/cache/*,*/amps-standalone/*
-
+" vnoremap <C-k> :m '"
 "" MAPPINGS
 let mapleader = ","
 inoremap jj <esc> :w!<cr>
 map <leader>w :w!<cr>
+
+" Shifting lines around
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 "" PLUGINS
 " Lightline

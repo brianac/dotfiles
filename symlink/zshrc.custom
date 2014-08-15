@@ -2,6 +2,9 @@
 # ********************************************************
 #
 
+# Boxen
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
 # ALIASES
 alias classic='cd ~/code/zendesk/zendesk'
 alias lotus='cd ~/code/zendesk/zendesk_console'
@@ -13,23 +16,17 @@ alias apps='cd ~/code/zendesk/apps'
 alias monitor='cd ~/code/zendesk/zendesk_monitor'
 alias sf='cd ~/code/zendesk/snowflake'
 alias zef='cd ~/code/zendesk/engagement_framework'
-alias zendesk='cd ~/code/zendesk'
+alias zd='cd ~/code/zendesk'
 
 setopt completealiases
 
 export PATH=/Users/brianacoppard/bin:$PATH
 
-alias bower='noglob bower'
-alias less='less -XF'
 alias mysql="mysql -uroot"
 alias reload!="source ~/.zshrc"
 alias restart!="touch ./tmp/restart.txt"
 alias restart_nginx!="boxen --restart-service nginx"
-alias tag="ctags -f '.tags' -R ."
-alias tidy_git="git branch --merged | grep -v master | xargs git branch -d"
 alias update='git stash && git pull && bundle install && git stash pop && restart!'
-alias vim='mvim -v'
-alias watch='tail -f log/development.log'
 
 
 # RUBY
@@ -41,104 +38,46 @@ alias sb='script/bootstrap'
 alias sc='script/console'
 alias migrate='rake db:migrate db:test:clone'
 
+setopt completealiases
 
-# ZENDESK
-# ********************************************************
+export PATH=/Users/brianacoppard/bin:$PATH
 
-# Paths
-export ZENDESK_ROOT=~/Code/zendesk
-export ZENDESK_APP_MARKET_PATH=~/Code/zendesk/zendesk_app_market
-export ZENDESK_APPS_PATH=~/Code/zendesk/apps
-export ZENDESK_APPS_TOOLS_PATH=~/Code/zendesk/zendesk_apps_tools
-export ZENDESK_CARSON_PATH=~/Code/zendesk/zendesk_carson
-export ZENDESK_CLASSIC_PATH=~/Code/zendesk/zendesk
-export ZENDESK_PROVISIONING_PATH=~/Code/zendesk/zendesk_provisioning
-
-# Server configuration
-export ZENDESK_HOST=zendesk.dev
-#export ZENDESK_PORT=80
-
-# Set vim as the editor of choice
-export GIT_EDITOR="vim"
-export EDITOR="vim"
-export VISUAL="vim"
-
-# Force 256 colors
-export TERM="xterm-256color"
-
-# Enable vim mode in the shell
-set -o vi
-
-# Disable auto correct
-unsetopt correct
-
-# INITIALIZATION
-# ********************************************************
-
-# Boxen
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-source $(brew --prefix nvm)/nvm.sh
-
-# autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-# Coreutils
-if $(gls &>/dev/null)
-then
-  alias ls="gls -F --color"
-  alias l="gls -lAh --color"
-  alias ll="gls -l --color"
-  alias la='gls -A --color'
-fi
-
-# Hitch
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
-
-
-# GRC [colorizes nifty unix tools all over the place]
-if $(grc &>/dev/null) && ! $(brew &>/dev/null)
-then
-  source `brew --prefix`/etc/grc.bashrc
-fi
-
-# RBENV
-eval "$(rbenv init -)"
-
-
-setopt HIST_IGNORE_DUPS
-setopt no_beep
-setopt auto_cd
-setopt auto_name_dirs
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 
-
-# prompt setup
 zstyle :compinstall filename '/Users/brianacoppard/.zshrc'
 
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# prompt setup
 setopt prompt_subst
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' stagedstr 'M' 
-zstyle ':vcs_info:*' unstagedstr 'M' 
+zstyle ':vcs_info:*' stagedstr 'M'
+zstyle ':vcs_info:*' unstagedstr 'M'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' actionformats '%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
 zstyle ':vcs_info:*' formats \
   '%F{2}%b %F{2}%c%F{5}%u%f'
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-zstyle ':vcs_info:*' enable git 
+zstyle ':vcs_info:*' enable git
 +vi-git-untracked() {
   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
     git status --porcelain | grep '??' &> /dev/null ; then
     hook_com[unstaged]+='%F{1}??%f'
-  fi  
+  fi
 }
 
+precmd () { vcs_info }
+PROMPT=' %F{1}%n %F{3}%3~ ${vcs_info_msg_0_} %f%# '
+
+# autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+setopt HIST_IGNORE_DUPS
+setopt no_beep
+setopt auto_cd
+setopt auto_name_dirs
