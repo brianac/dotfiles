@@ -18,7 +18,8 @@ set visualbell            " Don't beep
 " vnoremap <C-k> :m '"
 "" MAPPINGS
 let mapleader = ","
-inoremap jj <esc> :w!<cr>
+inoremap jj <esc> <cr>
+inoremap jjw <esc> :w!<cr>
 map <leader>w :w!<cr>
 
 " Shifting lines around
@@ -48,3 +49,8 @@ let g:tagbar_ctags_bin = "/opt/boxen/homebrew/bin/ctags"
 
 " Tmuxline
 let g:tmuxline_theme  = "lightline"
+
+" Quotes
+:nnoremap <Leader>q" ciw""<Esc>P
+:nnoremap <Leader>q' ciw''<Esc>P
+:nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P

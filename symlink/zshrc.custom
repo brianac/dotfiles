@@ -14,9 +14,10 @@ alias zaf='cd ~/code/zendesk/zendesk_app_framework'
 alias provisioning='cd ~/code/zendesk/zendesk_provisioning'
 alias apps='cd ~/code/zendesk/apps'
 alias monitor='cd ~/code/zendesk/zendesk_monitor'
-alias sf='cd ~/code/zendesk/snowflake'
-alias zef='cd ~/code/zendesk/engagement_framework'
+alias sf='cd ~/code/zendesk/embeddable/'
+alias ef='cd ~/code/zendesk/embeddable_framework/'
 alias zd='cd ~/code/zendesk'
+alias burp='java -Xmx1024m -jar ~/Downloads/burpsuite_free_v1.6.jar &'
 
 setopt completealiases
 
