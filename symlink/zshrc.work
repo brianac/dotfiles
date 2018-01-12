@@ -1,0 +1,18 @@
+# ALIASES
+alias classic='cd ~/code/zendesk/zendesk'
+alias lotus='cd ~/code/zendesk/zendesk_console'
+alias carson='cd ~/code/zendesk/zendesk_carson'
+alias zam='cd ~/code/zendesk/zendesk_app_market'
+alias zaf='cd ~/code/zendesk/zendesk_app_framework'
+alias provisioning='cd ~/code/zendesk/zendesk_provisioning'
+alias apps='cd ~/code/zendesk/apps'
+alias monitor='cd ~/code/zendesk/zendesk_monitor'
+alias sf='cd ~/code/zendesk/embeddable/'
+alias ef='cd ~/code/zendesk/embeddable_framework/'
+alias bps='cd ~/code/zendesk/blip_processor_scala/'
+alias ekr='cd ~/code/zendesk/embed_key_registry/'
+alias zd='cd ~/code/zendesk'
+
+# BEGIN DOCKER-IMAGES
+source /Users/bcoppard/Code/zendesk/docker-images/dockmaster/zdi.sh
+# END DOCKER-IMAGES

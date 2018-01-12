@@ -2,25 +2,6 @@
 # ********************************************************
 #
 
-# Boxen
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-
-# ALIASES
-alias classic='cd ~/code/zendesk/zendesk'
-alias lotus='cd ~/code/zendesk/zendesk_console'
-alias carson='cd ~/code/zendesk/zendesk_carson'
-alias zam='cd ~/code/zendesk/zendesk_app_market'
-alias zaf='cd ~/code/zendesk/zendesk_app_framework'
-alias provisioning='cd ~/code/zendesk/zendesk_provisioning'
-alias apps='cd ~/code/zendesk/apps'
-alias monitor='cd ~/code/zendesk/zendesk_monitor'
-alias sf='cd ~/code/zendesk/embeddable/'
-alias ef='cd ~/code/zendesk/embeddable_framework/'
-alias zd='cd ~/code/zendesk'
-alias burp='java -Xmx1024m -jar ~/Downloads/burpsuite_free_v1.6.jar &'
-
-setopt completealiases
-
 export PATH=/Users/brianacoppard/bin:$PATH
 
 alias mysql="mysql -uroot"
@@ -29,6 +10,8 @@ alias restart!="touch ./tmp/restart.txt"
 alias restart_nginx!="boxen --restart-service nginx"
 alias update='git stash && git pull && bundle install && git stash pop && restart!'
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # RUBY
 # ********************************************************
@@ -38,15 +21,6 @@ alias bi='bundle install --path vendor/bundle'
 alias sb='script/bootstrap'
 alias sc='script/console'
 alias migrate='rake db:migrate db:test:clone'
-
-setopt completealiases
-
-export PATH=/Users/brianacoppard/bin:$PATH
-
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -e
 
 zstyle :compinstall filename '/Users/brianacoppard/.zshrc'
 
@@ -75,10 +49,19 @@ zstyle ':vcs_info:*' enable git
 precmd () { vcs_info }
 PROMPT=' %F{1}%n %F{3}%3~ ${vcs_info_msg_0_} %f%# '
 
-# autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
 setopt HIST_IGNORE_DUPS
 setopt no_beep
 setopt auto_cd
 setopt auto_name_dirs
+
+# open vscode in terminal
+function code {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "Visual Studio Code" "$argPath"
+    fi
+}
