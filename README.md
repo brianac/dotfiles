@@ -10,7 +10,7 @@
 
 in root:
 ```bash
-ln -s Code/personal/dotfiles/.zshrc .zshrc
+ln -s Code/personal/dotfiles/symlink/zshrc .zshrc
 ln -s Code/personal/dotfiles/symlink/zshrc.custom .zshrc.custom
 ln -s Code/personal/dotfiles/symlink/zshrc.work .zshrc.work
 ln -s Code/personal/dotfiles/symlink/vimrc.local .vimrc.local

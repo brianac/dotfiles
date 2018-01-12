@@ -24,10 +24,21 @@
   untracked = red
 
 [push]
-  default = simple
+  default = upstream
 
 [pull]
   default = simple
 
 [branch]
   autosetuprebase = always
+
+[core]
+	excludesfile = ~/.gitignore
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
