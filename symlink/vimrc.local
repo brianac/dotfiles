@@ -54,3 +54,31 @@ let g:tmuxline_theme  = "lightline"
 :nnoremap <Leader>q" ciw""<Esc>P
 :nnoremap <Leader>q' ciw''<Esc>P
 :nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
+" Interface
+set guifont=Source\ Code\ Pro:h14
+set background=dark
+colorscheme base16-tomorrow
+
+" Use the mouse
+"set mouse=a
+
+" Prevent 'Ex mode'
+:nnoremap Q <Nop>
+
+" Better Ack
+nmap <leader>f :Ack!
+
+" Clear search highlighting
+nnoremap <leader><space> :noh<cr>
+
+" Folding
+set foldcolumn=2
+set foldlevelstart=20
+set foldmethod=indent
+
+" treat folds as text-objects
+vnoremap af :<C-U>silent! normal! [zV]z<CR>
+omap af :normal Vaf<CR>
+
+autocmd FileType ruby set foldmethod=syntax
