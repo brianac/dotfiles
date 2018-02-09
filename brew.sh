@@ -7,6 +7,7 @@ brew update
 brew install zsh \
              git \
              grep \
+             ripgrep \
              nvm \
              rbenv \
              vim --with-override-system-vi
