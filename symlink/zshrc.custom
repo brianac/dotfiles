@@ -22,6 +22,8 @@ alias sb='script/bootstrap'
 alias sc='script/console'
 alias migrate='rake db:migrate db:test:clone'
 
+eval "$(rbenv init -)"
+
 zstyle :compinstall filename '/Users/brianacoppard/.zshrc'
 
 autoload -Uz compinit

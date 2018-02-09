@@ -13,6 +13,8 @@ alias bps='cd ~/code/zendesk/blip_processor_scala/'
 alias ekr='cd ~/code/zendesk/embed_key_registry/'
 alias zd='cd ~/code/zendesk'
 
+alias rbt='cd ~/code/zendesk/zendesk_browser_tests && git pull && bundle exec rake rspec specs=spec/features/channels/widget/admin_settings billy=true main_js_path=http://localhost:1337/dist/main.js'
+
 # BEGIN DOCKER-IMAGES
 source /Users/bcoppard/Code/zendesk/docker-images/dockmaster/zdi.sh
 # END DOCKER-IMAGES

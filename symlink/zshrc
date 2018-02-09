@@ -1,6 +1,4 @@
-source ~/.zshrc.work
 source ~/.zshrc.custom
-
-setopt completealiases
+source ~/.zshrc.work
 
 export PATH=/Users/brianacoppard/bin:$PATH

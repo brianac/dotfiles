@@ -3,17 +3,10 @@
 	email = bcoppard@zendesk.com
 
 [alias]
-  a       = add -p
   co      = checkout
-  ci      = commit -v
-  cim     = commit -m
   st      = status -sb
   br      = branch
-  hist    = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   lg      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  pr      = pull-request
-  standup = log --since=yesterday --author='Travers McInerney'
-  track   = branch -u
 
 [color]
   ui = true
@@ -26,18 +19,12 @@
 [push]
   default = upstream
 
-[pull]
-  default = simple
-
-[branch]
-  autosetuprebase = always
-
 [core]
 	excludesfile = ~/.gitignore
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
