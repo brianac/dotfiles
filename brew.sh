@@ -10,6 +10,7 @@ brew install zsh \
              ripgrep \
              nvm \
              rbenv \
+             node \
              vim --with-override-system-vi
 
 # install applications

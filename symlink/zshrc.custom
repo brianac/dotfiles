@@ -1,6 +1,5 @@
-# GENERAL
+# ALIASES
 # ********************************************************
-#
 
 export PATH=/Users/brianacoppard/bin:$PATH
 
@@ -23,6 +22,15 @@ alias sc='script/console'
 alias migrate='rake db:migrate db:test:clone'
 
 eval "$(rbenv init -)"
+
+# GENERAL
+# ********************************************************
+
+# set up git auto complete
+#zstyle ':completion:*:*:git:*' script ~/.git-completion.zsh
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
 zstyle :compinstall filename '/Users/brianacoppard/.zshrc'
 
@@ -51,10 +59,19 @@ zstyle ':vcs_info:*' enable git
 precmd () { vcs_info }
 PROMPT=' %F{1}%n %F{3}%3~ ${vcs_info_msg_0_} %f%# '
 
+# SETTINGS
+# ********************************************************
+
 setopt HIST_IGNORE_DUPS
 setopt no_beep
 setopt auto_cd
 setopt auto_name_dirs
+
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+# VS Code
+# ********************************************************
 
 # open vscode in terminal
 function code {
