@@ -1,19 +1,15 @@
 # SETUP
 
-### Set zsh as default shell
+Dotfiles for easy setup on Mac
+
+### First time setup
 
 ```bash
-  chsh -s $(which zsh)
+source bootstrap.sh
 ```
 
-### Link zsh files
+### Only brew updates
 
-in root:
 ```bash
-ln -s Code/personal/dotfiles/symlink/zshrc .zshrc
-ln -s Code/personal/dotfiles/symlink/zshrc.custom .zshrc.custom
-ln -s Code/personal/dotfiles/symlink/zshrc.work .zshrc.work
-ln -s Code/personal/dotfiles/symlink/vimrc.local .vimrc.local
-ln -s Code/personal/dotfiles/symlink/gitignore .gitignore
-ln -s Code/personal/dotfiles/symlink/gitconfig .gitconfig
+source brew.sh
 ```
