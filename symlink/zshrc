@@ -2,3 +2,12 @@ source ~/.zshrc.custom
 source ~/.zshrc.work
 
 export PATH=/Users/brianacoppard/bin:$PATH
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# BEGIN ZDI
+source /Users/bcoppard/Code/zendesk/zdi/dockmaster/zdi.sh
+# END ZDI
