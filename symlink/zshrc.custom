@@ -2,6 +2,8 @@
 # ********************************************************
 
 export PATH=/Users/brianacoppard/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 
 alias mysql="mysql -uroot"
 alias reload!="source ~/.zshrc"
